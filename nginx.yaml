@@ -1,0 +1,7 @@
+--- 
+ - name: installing nginx
+   host: slave1
+   become: true
+   tasks:
+   - name: installing nginx
+     apt: name=nginx  state=latest
