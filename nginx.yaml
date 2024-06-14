@@ -1,7 +1,13 @@
---- 
- - name: installing nginx
-   hosts: all
-   become: true
-   tasks:
+---
+- name: installing nginx
+  hosts: all
+  become: true
+  tasks:
     - name: installing nginx
       apt: name=nginx  state=latest
+- name: installing apache
+  hosts: slave2
+  become: true
+  tasks:
+    - name: install apache
+      apt: name=apche  state=latest
